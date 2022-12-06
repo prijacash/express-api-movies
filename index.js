@@ -10,9 +10,9 @@ app.set('view engine', 'ejs');
 //     res.sendFile(__dirname+'/views/index.html');
 //   });
 
-app.get('/', (req, res)=>{
-res.render('index.ejs');
-});
+app.get('/', function(req, res) {
+    res.render('index', {name: "Sterling Archer", age: 35});
+  });
 
 
 

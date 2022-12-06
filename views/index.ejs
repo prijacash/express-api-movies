@@ -1,1 +1,21 @@
-<p> this is index page testing new</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+  </head>
+  <body>
+
+    <%- include('../views/partials/header.ejs') %>
+
+    <h1>Hello, <%= name %>!</h1>
+    <% let dogAge = age*7 %>
+    <h2>You are <%= dogAge %> in dog years.</h2>
+    <% let status %>
+    <%if (dogAge<100) {%>
+      <% status = 'young' %>
+    <%} else {%>
+      <% status = 'old' %>
+    <% } %>
+    <h3>This means you are <%=status%>!</h3>
+  </body>
+</html>
